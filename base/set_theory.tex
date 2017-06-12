@@ -14,7 +14,20 @@
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 %%User commands
-\newtheorem{myThm}{Theorem}
+\newtheorem{innercustomgeneric}{\customgenericname}
+\providecommand{\customgenericname}{}
+\newcommand{\newcustomtheorem}[2]{%
+  \newenvironment{#1}[1]
+  {%
+   \renewcommand\customgenericname{#2}%
+   \renewcommand\theinnercustomgeneric{##1}%
+   \innercustomgeneric
+  }
+  {\endinnercustomgeneric}
+}
+
+\newcustomtheorem{customthm}{Theorem}
+\newcustomtheorem{customlemma}{Lemma}
 
 \author{Cyrus Ramavarapu}
 \title{Notes Set Theory}

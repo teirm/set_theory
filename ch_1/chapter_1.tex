@@ -91,10 +91,17 @@ and $\mathcal{Q}$ is false.\\
     \caption{Truth Table for $\mathcal{P}\to \mathcal{Q}$}
 \end{center}
 \\\\
-\begin{myThm}
-For all sentences $\mathcal{P}$ and $\mathcal{Q}$, the following are true.
-\begin{itemize}
-    \item $\mathcal{P}\to \mathcal{P}\lor \mathcal{Q}$
-\end{itemize}
-\end{myThm}
+\begin{customthm}{1.5}
+    For all sentences $\mathcal{P}$ and $\mathcal{Q}$, the following are true.
+    \begin{center}
+    \begin{multicols}{2}
+    \begin{itemize}
+        \item $\mathcal{P}\to \mathcal{P}\lor \mathcal{Q}$
+        \item $\mathcal{Q}\to \mathcal{P}\lor \mathcal{Q}$
+        \item $\mathcal{P}\land \mathcal{Q}\to \mathcal{P}$
+        \item $\mathcal{P}\land \mathcal{Q}\to \mathcal{Q}$
+    \end{itemize}
+    \end{multicols}
+    \end{center}
+\end{customthm}
 \end{document}
