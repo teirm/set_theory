@@ -1,0 +1,100 @@
+\documentclass[../base/set_theory.tex]{subfiles}
+
+\begin{document}
+\chapter{Classes and Sets}
+\section{Historical Introduction and Paradox}
+Field began with Cantor and Dedekind with naive set theory.
+\begin{itemize}
+    \item  Semantic Paradoxes: contradiction arising from how
+           statements are made in a system.
+    \item  Logical Paradoxes: contradiction arising from structure
+           of the system.
+\end{itemize}
+\section{Russel's Paradox}
+Let $S$ be the set of all sets that do not contain themselves.
+Is $S \in S$?  If $S \in S$, then by definition of $S$, $S\notin
+S$.  If $S \notin S$, then by defintion of $S$, $S \in S$.
+\section{Berry's Paradox}
+See Page 4 of text.
+\section{Zermelo's System}
+This system has one primitive notion: $\in$.  By restricting naieve
+set theory, we can avoid the lgoical and semantic paradoxes.\\
+\\
+For example, let $S(x)$ be a condition on $x$.  Can't form the set 
+of all $x$ which satisfy $S(x)$, but if $A$ is a given set we can
+form the set of all $x$ in $A$ which satisfy $S(x)$.\\
+\\
+Essentialy, a propery $S(x)$ can't be used to form a set, but it 
+can instead be used to \textit{select} elements out of a known set.
+This is known as the \textbf{Axiom of Selection}.  This avoids the
+logical paradoxes by preventing sets that are ``too large''.\\
+\\
+The semantic paradoxes are avoided by restricting the statements 
+in the system to only those made from a formal language.
+\section{Basic Logic}
+A \textbf{sentence} is a statement that is either true or false --
+\textbf{unambiguously}.\\\\
+\break
+Given a sentence $\mathcal{P}$, $\neg \mathcal{P}$ is the negation of
+$\mathcal{P}$.\\
+\begin{center}
+    \begin{tabular}{c|c}
+    $\mathcal{P}$ & $\neg \mathcal{P}$ \\ \hline
+    T & F \\
+    F & T \\
+    \end{tabular}
+    \\[10pt]
+    \caption{Truth Table for $\neg \mathcal{P}$}
+\end{center}
+\\\\
+Given sentences $\mathcal{P}$ and $\mathcal{Q}$, the conjunction of
+$\mathcal{P}\land \mathcal{Q}$ is true if $\mathcal{P}$ and $\mathcal{Q}$
+are both true.\\
+\begin{center}
+    \begin{tabular}{c|c|c}
+    $\mathcal{P}$ & $\mathcal{Q}$ & $\mathcal{P}\land \mathcal{Q}$ \\ \hline
+    T & T & T \\ 
+    T & F & F \\ 
+    F & T & F \\  
+    F & F & F \\
+    \end{tabular}
+    \\[10pt]
+    \caption{Truth Table for $\mathcal{P}\land \mathcal{Q}$}
+\end{center}
+\\\\
+The disjuntion of $\mathcal{P}$ and $\mathcal{Q}$ is defined as true if
+$\mathcal{P}$ or $\mathcal{Q}$ are true.\\
+\begin{center}
+    \begin{tabular}{c|c|c}
+    $\mathcal{P}$ & $\mathcal{Q}$ & $\mathcal{P}\lor \mathcal{Q}$ \\ \hline
+    T & T & T \\ 
+    T & F & T \\ 
+    F & T & T \\  
+    F & F & F \\
+    \end{tabular}
+    \\[10pt]
+    \caption{Truth Table for $\mathcal{P}\lor \mathcal{Q}$}
+\end{center}
+\\\\
+Implication is given by $\mathcal{P}\to \mathcal{Q}$ is especially important.
+Formally, $\mathcal{P}\to \mathcal{Q}$ is true, except if $\mathcal{P}$ is true 
+and $\mathcal{Q}$ is false.\\
+\begin{center}
+    \begin{tabular}{c|c|c}
+    $\mathcal{P}$ & $\mathcal{Q}$ & $\mathcal{P}\to \mathcal{Q}$ \\ \hline
+    T & T & T \\ 
+    T & F & F \\ 
+    F & T & T \\  
+    F & F & T \\
+    \end{tabular}
+    \\[10pt]
+    \caption{Truth Table for $\mathcal{P}\to \mathcal{Q}$}
+\end{center}
+\\\\
+\begin{myThm}
+For all sentences $\mathcal{P}$ and $\mathcal{Q}$, the following are true.
+\begin{itemize}
+    \item $\mathcal{P}\to \mathcal{P}\lor \mathcal{Q}$
+\end{itemize}
+\end{myThm}
+\end{document}
